@@ -21,6 +21,8 @@
         <module>Decorator</module>
         <module>MVC</module>
         <module>MVVM</module>
+        <module>Proxy</module>
+        <module>ChainOfResponsibility</module>
     </modules>
 
     <properties>
