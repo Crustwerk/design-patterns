@@ -7,6 +7,21 @@
     <groupId>com.crustwerk</groupId>
     <artifactId>design-patterns</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>Singleton</module>
+        <module>Facade</module>
+        <module>Strategy</module>
+        <module>Template</module>
+        <module>Factory</module>
+        <module>Observer</module>
+        <module>Builder</module>
+        <module>Adapter</module>
+        <module>State</module>
+        <module>Decorator</module>
+        <module>MVC</module>
+        <module>MVVM</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>22</maven.compiler.source>
