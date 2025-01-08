@@ -23,6 +23,17 @@
         <module>MVVM</module>
         <module>Proxy</module>
         <module>ChainOfResponsibility</module>
+        <module>AbstractFactory</module>
+        <module>Command</module>
+        <module>Composite</module>
+        <module>Flyweight</module>
+        <module>Iterator</module>
+        <module>Mediator</module>
+        <module>Memento</module>
+        <module>Prototype</module>
+        <module>Visitor</module>
+        <module>Bridge</module>
+        <module>Interpreter</module>
     </modules>
 
     <properties>
