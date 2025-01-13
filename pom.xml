@@ -9,31 +9,31 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>Singleton</module>
-        <module>Facade</module>
-        <module>Strategy</module>
-        <module>Template</module>
-        <module>Factory</module>
-        <module>Observer</module>
-        <module>Builder</module>
-        <module>Adapter</module>
-        <module>State</module>
-        <module>Decorator</module>
-        <module>MVC</module>
-        <module>MVVM</module>
-        <module>Proxy</module>
-        <module>ChainOfResponsibility</module>
-        <module>AbstractFactory</module>
-        <module>Command</module>
-        <module>Composite</module>
-        <module>Flyweight</module>
-        <module>Iterator</module>
-        <module>Mediator</module>
-        <module>Memento</module>
-        <module>Prototype</module>
-        <module>Visitor</module>
-        <module>Bridge</module>
-        <module>Interpreter</module>
+        <module>singleton</module>
+        <module>facade</module>
+        <module>strategy</module>
+        <module>template</module>
+        <module>factory</module>
+        <module>observer</module>
+        <module>builder</module>
+        <module>adapter</module>
+        <module>state</module>
+        <module>decorator</module>
+        <module>model-view-controller</module>
+        <module>model-view-viewmodel</module>
+        <module>proxy</module>
+        <module>chain-of-responsibility</module>
+        <module>abstract-factory</module>
+        <module>command</module>
+        <module>composite</module>
+        <module>flyweight</module>
+        <module>iterator</module>
+        <module>mediator</module>
+        <module>memento</module>
+        <module>prototype</module>
+        <module>visitor</module>
+        <module>bridge</module>
+        <module>interpreter</module>
     </modules>
 
     <properties>
