@@ -9,31 +9,31 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
-        <module>singleton</module>
-        <module>facade</module>
-        <module>strategy</module>
-        <module>template</module>
-        <module>factory</module>
-        <module>observer</module>
-        <module>builder</module>
-        <module>adapter</module>
-        <module>state</module>
-        <module>decorator</module>
+        <module>singleton-pattern</module>
+        <module>facade-pattern</module>
+        <module>strategy-pattern</module>
+        <module>template-method-pattern</module>
+        <module>factory-pattern</module>
+        <module>observer-pattern</module>
+        <module>builder-pattern</module>
+        <module>adapter-pattern</module>
+        <module>state-pattern</module>
+        <module>decorator-pattern</module>
         <module>model-view-controller</module>
         <module>model-view-viewmodel</module>
-        <module>proxy</module>
+        <module>proxy-pattern</module>
         <module>chain-of-responsibility</module>
         <module>abstract-factory</module>
-        <module>command</module>
-        <module>composite</module>
-        <module>flyweight</module>
-        <module>iterator</module>
-        <module>mediator</module>
-        <module>memento</module>
-        <module>prototype</module>
-        <module>visitor</module>
-        <module>bridge</module>
-        <module>interpreter</module>
+        <module>command-pattern</module>
+        <module>composite-pattern</module>
+        <module>flyweight-pattern</module>
+        <module>iterator-pattern</module>
+        <module>mediator-pattern</module>
+        <module>memento-pattern</module>
+        <module>prototype-pattern</module>
+        <module>visitor-pattern</module>
+        <module>bridge-pattern</module>
+        <module>interpreter-pattern</module>
     </modules>
 
     <properties>
