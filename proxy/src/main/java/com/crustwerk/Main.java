@@ -10,6 +10,8 @@ Quando usarlo:
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ExpensiveObject object = new ExpensiveObjectProxy();
+        object.process();
+        //object.process();
     }
 }
