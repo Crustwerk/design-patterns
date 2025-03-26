@@ -10,6 +10,7 @@ Vantaggi:
         Questo rende il codice più flessibile e facile da mantenere.
 
     - Facile estensione: possiamo modificare la creazione dell'oggetto senza cambiare il codice che lo utilizza.
+        Basta creare una classe che implementi l'interfaccia e la corrispettiva factory che implementi la classe astratta.
 
     - Migliore manutenibilità: se la logica di creazione cambia, dobbiamo modificarla solo nella factory.
 */
@@ -23,5 +24,11 @@ public class Main {
         // Creiamo una fabbrica di auto
         MotorVehicleFactory carFactory = new CarFactory();
         MotorVehicle car = carFactory.create(); // Output: Build Car
+
+        MotorVehicleFactory scooterFactory = new ScooterFactory();
+        MotorVehicle scooter = scooterFactory.create();
+
+        MotorVehicleFactory truckFactory = new TruckFactory();
+        MotorVehicle truck = truckFactory.create();
     }
 }
