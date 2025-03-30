@@ -1,16 +1,22 @@
 package com.crustwerk;
 
 /*
-Necessità:
-    Fornire un'interfaccia semplificata a un insieme di interfacce complesse in un sistema.
+Simply put, a facade encapsulates a complex subsystem behind a simple interface.
+It hides much of the complexity and makes the subsystem easy to use.
 
-Quando usarlo:
-    Quando vuoi offrire un punto di accesso semplificato a un sistema complesso,
-    riducendo il numero di interazioni dirette con il sistema sottostante.
-*/
+Also, if we need to use the complex subsystem directly, we still can do that;
+we aren’t forced to use the facade all the time.
+
+Besides a much simpler interface, there’s one more benefit of using this design pattern.
+It decouples a client implementation from the complex subsystem.
+Thanks to this, we can make changes to the existing subsystem and don’t affect a client.
+ */
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        CarEngineFacade facade = new CarEngineFacade();
+        facade.startEngine();
+        // After some time...
+        facade.stopEngine();
     }
 }
