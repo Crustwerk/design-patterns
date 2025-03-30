@@ -1,17 +1,19 @@
-package com.crustwerk.advanced;
+package com.crustwerk.interface_chaining_multiple_paths;
 
 import java.util.Collections;
 import java.util.List;
 
-//interface chaining, mandatory firstName then lastName
-public class Person {
+// Dark arts level 2, interface chaining with multiple paths
+// Either: firstName then lastName, then anything
+// Or: email, then anything
+public class Person2 {
     private final String firstName;
     private final List<String> middleNames;
     private final String lastName;
     private final String email;
     private final String phone;
 
-    private Person(Builder builder) {
+    private Person2(Builder builder) {
         this.firstName = builder.firstName;
         this.middleNames = builder.middleNames;
         this.lastName = builder.lastName;
@@ -19,7 +21,7 @@ public class Person {
         this.phone = builder.phone;
     }
 
-    public static FirstNameSetter builder() {
+    public static FirstNameOrEmailSetter builder() {
         return new Builder();
     }
 
@@ -43,25 +45,37 @@ public class Person {
         return phone;
     }
 
-    public interface FirstNameSetter {
+    public interface FirstNameOrEmailSetter {
         LastNameSetter firstName(String firstName);
+
+        NameOrOptionalFieldsSetter email(String email);
     }
 
     public interface LastNameSetter {
+        EmailOrOptionalFieldsSetter lastName(String lastName);
+    }
+
+    public interface EmailOrOptionalFieldsSetter extends OptionalFieldsSetter {
+        OptionalFieldsSetter email(String email);
+    }
+
+    public interface NameOrOptionalFieldsSetter extends OptionalFieldsSetter {
+        LastNameThenOptionalFieldsSetter firstName(String firstName);
+    }
+
+    public interface LastNameThenOptionalFieldsSetter {
         OptionalFieldsSetter lastName(String lastName);
     }
 
     public interface OptionalFieldsSetter {
         OptionalFieldsSetter middleNames(List<String> middleNames);
 
-        OptionalFieldsSetter email(String email);
-
         OptionalFieldsSetter phone(String phone);
 
-        Person build();
+        Person2 build();
     }
 
-    private static class Builder implements FirstNameSetter, LastNameSetter, OptionalFieldsSetter {
+    private static class Builder implements FirstNameOrEmailSetter, LastNameSetter, EmailOrOptionalFieldsSetter, NameOrOptionalFieldsSetter, LastNameThenOptionalFieldsSetter, OptionalFieldsSetter {
         private String firstName;
         private List<String> middleNames = Collections.emptyList();
         private String lastName;
@@ -98,8 +112,8 @@ public class Person {
             return this;
         }
 
-        public Person build() {
-            return new Person(this);
+        public Person2 build() {
+            return new Person2(this);
         }
     }
 }

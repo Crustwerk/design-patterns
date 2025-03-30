@@ -1,4 +1,4 @@
-package com.crustwerk;
+package com.crustwerk.classic;
 
 public class Post {
 
